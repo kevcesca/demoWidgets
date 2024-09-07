@@ -1,0 +1,108 @@
+.customer-info {
+    font-weight: bold;
+}
+
+.dropdown-menu {
+    margin-top: 10px;
+}
+
+.card-custom {
+    margin: 15px 0;
+}
+
+.info-text {
+    color: #333;
+    font-weight: bold;
+}
+
+.status-labels .badge {
+    margin: 5px 0;
+}
+
+.btn-finish {
+    margin-bottom: 10px;
+}
+
+.table-responsive {
+    margin-top: 20px;
+}
+
+.table-motivos {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.table-motivos thead th {
+    background-color: #f8f9fa;
+    padding: 10px;
+}
+
+.table-motivos tbody td {
+    padding: 10px;
+    border: 1px solid #dee2e6;
+}
+
+/* Estilos para la tabla de tiendas */
+.table-stores thead th {
+    background-color: #f0f0f0;
+    /* Color gris */
+    border: none;
+    /* Sin bordes */
+    padding: 12px;
+}
+
+.table-stores tbody td {
+    border: none;
+    /* Sin bordes en las celdas */
+    padding: 10px;
+}
+
+.search-bar {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Alineación a la derecha para botones individuales */
+.button-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.formrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: last baseline;
+    padding: 2.5rem;
+}
+
+/* Colores personalizados para los botones */
+.btn-primary {
+    background-color: #17a2b8 !important;
+    border-color: #17a2b8 !important;
+}
+
+.btn-success {
+    background-color: #007bff !important;
+    border-color: #007bff !important;
+}
+
+.btn-primary:hover,
+.btn-success:hover {
+    background-color: darken(#17a2b8, 10%);
+    border-color: darken(#17a2b8, 10%);
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.container { grid-area: 1 / 1 / 2 / 4; }
+#sidebar-placeholder { grid-area: 1 / 4 / 2 / 5; }

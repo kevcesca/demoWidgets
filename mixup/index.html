@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Atención Telefónica</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h5>Centro de Atención Telefónica.</h5>
+        <p><span class="customer-info">Buenas Tardes, le atiende: ABIGAIL NAJERA.</span></p>
+        <p>¿En qué puedo Servirle?</p>
+
+        <!-- Formulario de motivos -->
+        <div class="formrow">
+            <div class="form-group col-md-6">
+                <label for="grupo">Grupo:</label>
+                <select id="grupo" class="form-control">
+                    <option>SERVICIO</option>
+                    <option>ACLARACIÓN</option>
+                    <option>CAJEROS SANBORNS</option>
+                    <option>LINEA DE CRÉDITO</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="servicio">Servicio:</label>
+                <select id="servicio" class="form-control">
+                    <option>Transferencia a Aprobaciones</option>
+                    <option>Activación de NIP</option>
+                    <option>Cambios Demográficos</option>
+                    <option>Cancelación de Adicional</option>
+                    <option>Cancelación de Cuenta</option>
+                    <option>Carta Referencia</option>
+                    <option>Cliente RIP</option>
+                    <option>Directorio de tiendas</option>
+                    <option>Envío de Estados de Cuenta</option>
+                    <option>Envío de Placa</option>
+                    <option>Problemas Internet</option>
+                    <option>Queja de Servicio Tienda</option>
+                    <option>Reporte de Estados de Cuenta</option>
+                    <option>Registro de Adicional</option>
+                    <option>Tarjeta Robada</option>
+                    <option>Transferencia a Seguros</option>
+                    <option>Transferencia a Promociones</option>
+                </select>
+            </div>
+            <button class="btn btn-primary">Agregar</button>
+        </div>
+
+        <!-- Tabla de Motivos de Contacto -->
+        <label for="buscar-tienda">Motivos de Contacto:</label>
+        <div class="motivos-contacto">
+            <table class="table-motivos">
+                <thead>
+                    <tr>
+                        <th>Grupo</th>
+                        <th>Servicio</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="3">Sin Información</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Fila para finalizar la llamada -->
+        <div class="button-right">
+            <p>Esperamos tener el placer de atenderlo próximamente.<br>Le atendió <b>ABIGAIL NAJERA</b> del Centro de
+                Atención Telefónica.</p>
+            <button class="btn btn-success btn-finish">Finalizar</button>
+        </div>
+
+        <!-- Barra de búsqueda -->
+        <div class="search-bar">
+            <label for="buscar-tienda">Buscar:</label>
+            <input type="text" id="buscar-tienda" class="form-control" placeholder="Buscar tienda">
+        </div>
+
+        <!-- Tabla de tiendas -->
+        <div class="table-responsive">
+            <table class="table table-stores">
+                <thead>
+                    <tr>
+                        <th>Tienda</th>
+                        <th>Ubicación</th>
+                        <th>Gerencia</th>
+                        <th>Conmutador</th>
+                        <th>Fax</th>
+                        <th>Zona</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sin Información</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Barra lateral -->
+    <div id="sidebar-placeholder"></div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Cargar la barra lateral -->
+    <script>
+        fetch('sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebar-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+
+</html>

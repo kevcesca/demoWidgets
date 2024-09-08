@@ -29,11 +29,7 @@
             <div class="form-group col-md-6">
                 <label for="servicio">Servicio:</label>
                 <select id="servicio" class="form-control">
-                    <option>Bonificación de CXF</option>
-                    <option>Fraudes</option>
-                    <option>Cheques Devueltos</option>
-                    <option>Traspaso de Pago</option>
-                    <option>Pagos Internet</option>
+                    <!-- Las opciones se llenarán dinámicamente con JavaScript -->
                 </select>
             </div>
             <button class="btn btn-primary">Agregar</button>
@@ -114,6 +110,9 @@
                 document.getElementById('sidebar-placeholder').innerHTML = data;
             });
     </script>
+
+    <!-- Enlace al archivo JS externo -->
+    <script src="script.js"></script>
 </body>
 
 </html>

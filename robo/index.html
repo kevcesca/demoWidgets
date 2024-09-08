@@ -19,35 +19,17 @@
         <div class="formrow">
             <div class="form-group col-md-6">
                 <label for="grupo">Grupo:</label>
-                <select id="grupo" class="form-control">
-                    <option>SERVICIO</option>
-                    <option>ACLARACIÓN</option>
-                    <option>LINEA DE CRÉDITO</option>
-                    <option>CAJEROS SANBORNS</option>
+                <select id="grupo" class="form-control" onchange="updateServicios()">
+                    <option value="servicio">SERVICIO</option>
+                    <option value="aclaracion">ACLARACIÓN</option>
+                    <option value="lineaCredito">LINEA DE CRÉDITO</option>
+                    <option value="cajerosSanborns">CAJEROS SANBORNS</option>
                 </select>
             </div>
             <div class="form-group col-md-6">
                 <label for="servicio">Servicio:</label>
                 <select id="servicio" class="form-control">
-                    <option>Transferencia a Aprobaciones</option>
-                    <option>Activación de NIP</option>
-                    <option>Cambios Demográficos</option>
-                    <option>Cancelación de Adicional</option>
-                    <option>Cancelación de Cuenta</option>
-                    <option>Carta Referencia</option>
-                    <option>Cliente RIP</option>
-                    <option>Directorio de tiendas</option>
-                    <option>Envío de Estados de Cuenta</option>
-                    <option>Envío de Placa</option>
-                    <option>Problemas Internet</option>
-                    <option>Queja de Servicio Tienda</option>
-                    <option>Registro de Adicional</option>
-                    <option>Reporte de Estados de Cuenta</option>
-                    <option>Status de Solicitud</option>
-                    <option>Tarjeta Robada</option>
-                    <option>Transferencia a Cobranza</option>
-                    <option>Transferencia a Promociones</option>
-                    <option>Transferencias a Seguros</option>
+                    <!-- Las opciones se actualizarán dinámicamente -->
                 </select>
             </div>
             <button class="btn btn-primary">Agregar</button>
@@ -128,6 +110,10 @@
                 document.getElementById('sidebar-placeholder').innerHTML = data;
             });
     </script>
+
+    <!-- Archivo externo JS -->
+    <script src="script.js"></script>
+
 </body>
 
 </html>

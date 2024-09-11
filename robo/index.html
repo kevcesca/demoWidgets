@@ -5,30 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centro de Atención Telefónica SEARS</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Cargar NEO Framework CSS -->
+    <link rel="stylesheet" href="../css/neo/neo.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="container">
+    <div class="neo-container container">
         <h5>Centro de Atención Telefónica SEARS.</h5>
-        <p><span class="customer-info">Buenas Tardes, le atiende: ABIGAIL NAJERA.</span></p>
-        <p>¿En qué puedo Servirle?</p>
+        <p><span class="customer-info">Buenas Tardes, le atiende: <b>ABIGAIL NAJERA</b>.</span></p>
+        <p>¿En qué puedo servirle?</p>
 
         <!-- Formulario de motivos -->
         <div class="formrow">
-            <div class="form-group col-md-6">
+            <div class="neo-form-group neo-col neo-col--6">
                 <label for="grupo">Grupo:</label>
-                <select id="grupo" class="form-control">
+                <select id="grupo" class="neo-form-control">
                     <option>SERVICIO</option>
                     <option>ACLARACIÓN</option>
                     <option>LINEA DE CRÉDITO</option>
                     <option>CAJEROS SANBORNS</option>
                 </select>
             </div>
-            <div class="form-group col-md-6">
+            <div class="neo-form-group neo-col neo-col--6">
                 <label for="servicio">Servicio:</label>
-                <select id="servicio" class="form-control">
+                <select id="servicio" class="neo-form-control">
                     <option>Transferencia a Aprobaciones</option>
                     <option>Activación de NIP</option>
                     <option>Cambios Demográficos</option>
@@ -50,13 +51,13 @@
                     <option>Transferencias a Seguros</option>
                 </select>
             </div>
-            <button class="btn btn-primary">Agregar</button>
+            <button class="neo-button custom-primary">Agregar</button>
         </div>
 
         <!-- Tabla de Motivos de Contacto -->
         <label for="buscar-tienda">Motivos de Contacto:</label>
         <div class="motivos-contacto">
-            <table class="table-motivos">
+            <table class="neo-table neo-table--hover table-stores">
                 <thead>
                     <tr>
                         <th>Grupo</th>
@@ -74,20 +75,19 @@
 
         <!-- Fila para finalizar la llamada -->
         <div class="button-right">
-            <p>Esperamos tener el placer de atenderlo próximamente.<br>Le atendió <b>ABIGAIL NAJERA</b> del Centro de
-                Atención Telefónica SEARS.</p>
-            <button class="btn btn-success btn-finish">Finalizar</button>
+            <p>Esperamos tener el placer de atenderlo próximamente.<br>Le atendió <b>ABIGAIL NAJERA</b> del Centro de Atención Telefónica SEARS.</p>
+            <button class="neo-button custom-success btn-finish">Finalizar</button>
         </div>
 
         <!-- Barra de búsqueda -->
-        <div class="search-bar">
+        <div class="neo-form-group search-bar">
             <label for="buscar-tienda">Buscar:</label>
-            <input type="text" id="buscar-tienda" class="form-control" placeholder="Buscar tienda">
+            <input type="text" id="buscar-tienda" class="neo-form-control" placeholder="Buscar tienda">
         </div>
 
         <!-- Tabla de tiendas -->
-        <div class="table-responsive">
-            <table class="table table-stores">
+        <div class="neo-table-responsive">
+            <table class="neo-table neo-table--hover table-stores">
                 <thead>
                     <tr>
                         <th>Tienda</th>
@@ -115,11 +115,6 @@
     <!-- Barra lateral -->
     <div id="sidebar-placeholder"></div>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
     <!-- Cargar la barra lateral -->
     <script>
         fetch('sidebar.html')
@@ -129,7 +124,7 @@
             });
     </script>
 
-    <!-- Archivo externo JS -->
+    <!-- Enlace al archivo JS externo -->
     <script src="script.js"></script>
 
 </body>

@@ -34,8 +34,10 @@
 }
 
 .table-motivos thead th {
-    background-color: #f8f9fa;
-    padding: 10px;
+    background-color: #f0f0f0; /* Color gris igual que la tabla de tiendas */
+    padding: 12px;
+    border: none;
+    
 }
 
 .table-motivos tbody td {
@@ -45,57 +47,70 @@
 
 /* Estilos para la tabla de tiendas */
 .table-stores thead th {
-    background-color: #f0f0f0;
-    /* Color gris */
-    border: none;
-    /* Sin bordes */
+    background-color: #f0f0f0; /* Color gris */
+    border: none; /* Sin bordes */
     padding: 12px;
 }
 
 .table-stores tbody td {
     border: none;
-    /* Sin bordes en las celdas */
     padding: 10px;
 }
 
+/* Barra de búsqueda */
 .search-bar {
     margin-top: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px; /* Combinado para evitar duplicación */
 }
 
-/* Alineación a la derecha para botones individuales */
 .button-right {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 20px; /* Se consolidaron los márgenes duplicados */
+    text-align: left; /* Mantenido el estilo adicional */
 }
 
 .formrow {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: last baseline;
-    padding: 2.5rem;
+    margin-bottom: 20px; /* Combinado con el margen duplicado */
+}
+
+.formrow .neo-form-group {
+    margin-right: 10px;
 }
 
 /* Colores personalizados para los botones */
-.btn-primary {
-    background-color: #17a2b8 !important;
+.neo-button.btn-primary {
+    background-color: #17a2b8 !important; /* Color azul claro de Bootstrap */
     border-color: #17a2b8 !important;
+    color: white !important;
+    padding: .2rem;
 }
 
-.btn-success {
-    background-color: #007bff !important;
+.neo-button.btn-success {
+    background-color: #007bff !important; /* Color azul oscuro para "Finalizar" */
     border-color: #007bff !important;
+    color: white !important;
+    padding: .2rem;
 }
 
-.btn-primary:hover,
-.btn-success:hover {
-    background-color: darken(#17a2b8, 10%);
-    border-color: darken(#17a2b8, 10%);
+/* Efectos hover para los botones */
+.neo-button.btn-primary:hover {
+    background-color: #138496 !important; /* Azul más oscuro en hover */
+    border-color: #117a8b !important;
 }
 
+.neo-button.btn-success:hover {
+    background-color: #0056b3 !important; /* Azul oscuro en hover */
+    border-color: #0056b3 !important;
+}
+
+
+/* Estilos de layout de la página */
 body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -104,5 +119,58 @@ body {
     grid-row-gap: 0px;
 }
 
-.container { grid-area: 1 / 1 / 2 / 4; }
-#sidebar-placeholder { grid-area: 1 / 4 / 2 / 5; }
+.container {
+    grid-area: 1 / 1 / 2 / 4;
+}
+
+#sidebar-placeholder {
+    grid-area: 1 / 4 / 2 / 5;
+}
+
+/* Estilos adicionales de botones */
+.neo-button {
+    margin-left: 10px;
+}
+
+/* Espaciado para tablas */
+.neo-table {
+    margin-top: 20px;
+}
+
+.neo-form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.neo-form-control {
+    padding: .3rem;
+}
+
+/* Estilos para los botones personalizados */
+.custom-primary {
+    background-color: #17a2b8 !important; /* Color azul claro de Bootstrap */
+    border-color: #17a2b8 !important;
+    color: white !important;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+}
+
+.custom-success {
+    background-color: #007bff !important; /* Color azul oscuro para "Finalizar" */
+    border-color: #007bff !important;
+    color: white !important;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+}
+
+/* Efectos hover */
+.custom-primary:hover {
+    background-color: #138496 !important;
+    border-color: #117a8b !important;
+}
+
+.custom-success:hover {
+    background-color: #0056b3 !important;
+    border-color: #0056b3 !important;
+}

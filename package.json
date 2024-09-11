@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@avaya/neo": "^3.81.13"
+  }
+}
